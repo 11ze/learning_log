@@ -146,6 +146,11 @@ if os.environ['HOME'] == '/app':
     # 让request.is_secure()承认X-Forwarded-Proto头
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+    # 只允许Heroku托管这个项目
+    ALLOWED_HOSTS = ['wangze-log.herokuapp.com']
+
+    DEBUG = False
+
     # 支持所有的主机头(host header)
     ALLOWED_HOSTS = ['*']
 
