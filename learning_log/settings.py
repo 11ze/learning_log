@@ -136,7 +136,8 @@ BOOTSTRAP3 = {
     }
 
 # Heroku设置
-if os.getcwd() == '/app':
+#if os.getcwd() == '/app':
+if os.environ['HOME'] == '/app':
     import dj_database_url
     DATABASES = {
         'default': dj_database_url.config(default='postgres://localhost')
